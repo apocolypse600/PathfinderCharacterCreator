@@ -433,11 +433,239 @@ void MainWindow::on_actionAbout_triggered()
     QMessageBox::information(this,"About","Pathfinder Character Creator " + VERSION); // TODO should probably replace with a QMessageBox::about at some point
 }
 
-/*void MainWindow::updateClassSkills()
+void MainWindow::updateClassSkills()
 {
-    int newValue = ui->lineEditClassSkills1->text().toInt() + ui->lineEditClassSkills2->text().toInt()
-            + ui->lineEditClassSkills3->text().toInt() + ui->lineEditClassSkills4->text().toInt()
-            + ui->lineEditClassSkills5->text().toInt();
+    int newValue = ui->spinBoxClassSkills1->text().toInt() + ui->spinBoxClassSkills2->text().toInt()
+            + ui->spinBoxClassSkills3->text().toInt() + ui->spinBoxClassSkills4->text().toInt()
+            + ui->spinBoxClassSkills5->text().toInt();
 
     ui->lineEditClassSkillsTotal->setText(QString::number(newValue));
-}*/
+}
+
+void MainWindow::updateClassBAB()
+{
+    int newValue = ui->spinBoxClassBAB1->text().toInt() + ui->spinBoxClassBAB2->text().toInt()
+            + ui->spinBoxClassBAB3->text().toInt() + ui->spinBoxClassBAB4->text().toInt()
+            + ui->spinBoxClassBAB5->text().toInt();
+
+    ui->lineEditClassBABTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::updateClassFortSave()
+{
+    int newValue = ui->spinBoxClassFortSave1->text().toInt() + ui->spinBoxClassFortSave2->text().toInt()
+            + ui->spinBoxClassFortSave3->text().toInt() + ui->spinBoxClassFortSave4->text().toInt()
+            + ui->spinBoxClassFortSave5->text().toInt();
+
+    ui->lineEditClassFortSaveTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::updateClassRefSave()
+{
+    int newValue = ui->spinBoxClassRefSave1->text().toInt() + ui->spinBoxClassRefSave2->text().toInt()
+            + ui->spinBoxClassRefSave3->text().toInt() + ui->spinBoxClassRefSave4->text().toInt()
+            + ui->spinBoxClassRefSave5->text().toInt();
+
+    ui->lineEditClassRefSaveTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::updateClassWillSave()
+{
+    int newValue = ui->spinBoxClassWillSave1->text().toInt() + ui->spinBoxClassWillSave2->text().toInt()
+            + ui->spinBoxClassWillSave3->text().toInt() + ui->spinBoxClassWillSave4->text().toInt()
+            + ui->spinBoxClassWillSave5->text().toInt();
+
+    ui->lineEditClassWillSaveTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::updateClassLevels()
+{
+    int newValue = ui->spinBoxClassLevels1->text().toInt() + ui->spinBoxClassLevels2->text().toInt()
+            + ui->spinBoxClassLevels3->text().toInt() + ui->spinBoxClassLevels4->text().toInt()
+            + ui->spinBoxClassLevels5->text().toInt();
+
+    ui->lineEditClassLevelsTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::updateHPGained()
+{
+    int newValue = ui->spinBoxHPGained1->text().toInt() + ui->spinBoxHPGained2->text().toInt()
+            + ui->spinBoxHPGained3->text().toInt() + ui->spinBoxHPGained4->text().toInt()
+            + ui->spinBoxHPGained5->text().toInt();
+
+    ui->lineEditHPGainedTotal->setText(QString::number(newValue));
+}
+
+void MainWindow::on_spinBoxClassSkills1_valueChanged()
+{
+    updateClassSkills();
+}
+
+void MainWindow::on_spinBoxClassSkills2_valueChanged()
+{
+    updateClassSkills();
+}
+
+void MainWindow::on_spinBoxClassSkills3_valueChanged()
+{
+    updateClassSkills();
+}
+
+void MainWindow::on_spinBoxClassSkills4_valueChanged()
+{
+    updateClassSkills();
+}
+
+void MainWindow::on_spinBoxClassSkills5_valueChanged()
+{
+    updateClassSkills();
+}
+
+void MainWindow::on_spinBoxClassBAB1_valueChanged()
+{
+    updateClassBAB();
+}
+
+void MainWindow::on_spinBoxClassBAB2_valueChanged()
+{
+    updateClassBAB();
+}
+
+void MainWindow::on_spinBoxClassBAB3_valueChanged()
+{
+    updateClassBAB();
+}
+
+void MainWindow::on_spinBoxClassBAB4_valueChanged()
+{
+    updateClassBAB();
+}
+
+void MainWindow::on_spinBoxClassBAB5_valueChanged()
+{
+    updateClassBAB();
+}
+
+void MainWindow::on_spinBoxClassFortSave1_valueChanged()
+{
+    updateClassFortSave();
+}
+
+void MainWindow::on_spinBoxClassFortSave2_valueChanged()
+{
+    updateClassFortSave();
+}
+
+void MainWindow::on_spinBoxClassFortSave3_valueChanged()
+{
+    updateClassFortSave();
+}
+
+void MainWindow::on_spinBoxClassFortSave4_valueChanged()
+{
+    updateClassFortSave();
+}
+
+void MainWindow::on_spinBoxClassFortSave5_valueChanged()
+{
+    updateClassFortSave();
+}
+
+void MainWindow::on_spinBoxClassRefSave1_valueChanged()
+{
+    updateClassRefSave();
+}
+
+void MainWindow::on_spinBoxClassRefSave2_valueChanged()
+{
+    updateClassRefSave();
+}
+void MainWindow::on_spinBoxClassRefSave3_valueChanged()
+{
+    updateClassRefSave();
+}
+
+void MainWindow::on_spinBoxClassRefSave4_valueChanged()
+{
+    updateClassRefSave();
+}
+
+void MainWindow::on_spinBoxClassRefSave5_valueChanged()
+{
+    updateClassRefSave();
+}
+
+void MainWindow::on_spinBoxClassWillSave1_valueChanged()
+{
+    updateClassWillSave();
+}
+
+void MainWindow::on_spinBoxClassWillSave2_valueChanged()
+{
+    updateClassWillSave();
+}
+
+void MainWindow::on_spinBoxClassWillSave3_valueChanged()
+{
+    updateClassWillSave();
+}
+
+void MainWindow::on_spinBoxClassWillSave4_valueChanged()
+{
+    updateClassWillSave();
+}
+
+void MainWindow::on_spinBoxClassWillSave5_valueChanged()
+{
+    updateClassWillSave();
+}
+
+void MainWindow::on_spinBoxClassLevels1_valueChanged()
+{
+    updateClassLevels();
+}
+
+void MainWindow::on_spinBoxClassLevels2_valueChanged()
+{
+    updateClassLevels();
+}
+
+void MainWindow::on_spinBoxClassLevels3_valueChanged()
+{
+    updateClassLevels();
+}
+
+void MainWindow::on_spinBoxClassLevels4_valueChanged()
+{
+    updateClassLevels();
+}
+
+void MainWindow::on_spinBoxClassLevels5_valueChanged()
+{
+    updateClassLevels();
+}
+
+void MainWindow::on_spinBoxHPGained1_valueChanged()
+{
+    updateHPGained();
+}
+
+void MainWindow::on_spinBoxHPGained2_valueChanged()
+{
+    updateHPGained();
+}
+
+void MainWindow::on_spinBoxHPGained3_valueChanged()
+{
+    updateHPGained();
+}
+
+void MainWindow::on_spinBoxHPGained4_valueChanged()
+{
+    updateHPGained();
+}
+
+void MainWindow::on_spinBoxHPGained5_valueChanged()
+{
+    updateHPGained();
+}

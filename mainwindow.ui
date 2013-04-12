@@ -908,16 +908,6 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="8">
-           <widget class="QLineEdit" name="lineEditHitDieTotal">
-            <property name="text">
-             <string>0</string>
-            </property>
-            <property name="readOnly">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
           <item row="6" column="9">
            <widget class="QLineEdit" name="lineEditHPGainedTotal">
             <property name="text">
@@ -1427,7 +1417,6 @@
   <tabstop>lineEditClassWillSaveTotal</tabstop>
   <tabstop>lineEditClassLevelsTotal</tabstop>
   <tabstop>lineEditIntMod</tabstop>
-  <tabstop>lineEditHitDieTotal</tabstop>
   <tabstop>lineEditHPGainedTotal</tabstop>
   <tabstop>lineEditDexTotal</tabstop>
   <tabstop>lineEditDexMod</tabstop>
