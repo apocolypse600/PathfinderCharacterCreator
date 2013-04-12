@@ -7,6 +7,14 @@ I've tested this with qt4, but I imagine it'll work with qt5, I haven't used any
 Compiling Instructions:
 
 Linux:
+
+Dependancies:
+For Debian/Ubuntu
+    qt4-qmake
+
+For Arch:
+    qt-4
+
 In the folder run qmake && make
 
 Windows + OSX:
