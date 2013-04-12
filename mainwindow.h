@@ -81,16 +81,6 @@ private slots:
 
     void on_actionAbout_triggered();
 
-    void on_lineEditClassSkills1_textChanged();
-
-    void on_lineEditClassSkills2_textChanged();
-
-    void on_lineEditClassSkills3_textChanged();
-
-    void on_lineEditClassSkills4_textChanged();
-
-    void on_lineEditClassSkills5_textChanged();
-
 private:
     Ui::MainWindow *ui;
     void updateStr();

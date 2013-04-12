@@ -433,36 +433,11 @@ void MainWindow::on_actionAbout_triggered()
     QMessageBox::information(this,"About","Pathfinder Character Creator " + VERSION); // TODO should probably replace with a QMessageBox::about at some point
 }
 
-void MainWindow::updateClassSkills()
+/*void MainWindow::updateClassSkills()
 {
     int newValue = ui->lineEditClassSkills1->text().toInt() + ui->lineEditClassSkills2->text().toInt()
             + ui->lineEditClassSkills3->text().toInt() + ui->lineEditClassSkills4->text().toInt()
             + ui->lineEditClassSkills5->text().toInt();
 
     ui->lineEditClassSkillsTotal->setText(QString::number(newValue));
-}
-
-void MainWindow::on_lineEditClassSkills1_textChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_lineEditClassSkills2_textChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_lineEditClassSkills3_textChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_lineEditClassSkills4_textChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_lineEditClassSkills5_textChanged()
-{
-    updateClassSkills();
-}
+}*/
