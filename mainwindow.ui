@@ -778,6 +778,16 @@
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
          <layout class="QGridLayout" name="gridLayout_2">
+          <item row="6" column="3">
+           <widget class="QLineEdit" name="lineEditClassBABTotal">
+            <property name="text">
+             <string>0</string>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="1">
            <widget class="QLabel" name="labelClassName">
             <property name="maximumSize">
@@ -842,34 +852,6 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSave1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QLineEdit" name="lineEditClassBAB2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="8">
-           <widget class="QLineEdit" name="lineEditHitDie1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLineEdit" name="lineEditClassSkills1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="9">
            <widget class="QLabel" name="labelHPGained">
             <property name="maximumSize">
@@ -886,76 +868,6 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="3">
-           <widget class="QLineEdit" name="lineEditClassBAB1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QLineEdit" name="lineEditClassRefSave1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QLineEdit" name="lineEditClassSkills3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="3">
-           <widget class="QLineEdit" name="lineEditClassBAB3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="6">
-           <widget class="QLineEdit" name="lineEditClassWillSave1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="7">
-           <widget class="QLineEdit" name="lineEditClassLevels1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="5">
-           <widget class="QLineEdit" name="lineEditClassRefSave3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="6">
-           <widget class="QLineEdit" name="lineEditClassWillSave3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="7">
-           <widget class="QLineEdit" name="lineEditClassLevels3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="9">
-           <widget class="QLineEdit" name="lineEditHPGained1">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="1">
            <widget class="QLineEdit" name="lineEditClass2">
             <property name="minimumSize">
@@ -963,69 +875,6 @@
               <width>200</width>
               <height>0</height>
              </size>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLineEdit" name="lineEditClassSkills2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QLineEdit" name="lineEditClassSkills4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="3">
-           <widget class="QLineEdit" name="lineEditClassBAB4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSave2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="5">
-           <widget class="QLineEdit" name="lineEditClassRefSave2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="6">
-           <widget class="QLineEdit" name="lineEditClassWillSave2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="7">
-           <widget class="QLineEdit" name="lineEditClassLevels2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="8">
-           <widget class="QLineEdit" name="lineEditHitDie2">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="9">
-           <widget class="QLineEdit" name="lineEditHPGained2">
-            <property name="text">
-             <string>0</string>
             </property>
            </widget>
           </item>
@@ -1059,13 +908,6 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSave3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
           <item row="6" column="8">
            <widget class="QLineEdit" name="lineEditHitDieTotal">
             <property name="text">
@@ -1086,20 +928,6 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="8">
-           <widget class="QLineEdit" name="lineEditHitDie3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="9">
-           <widget class="QLineEdit" name="lineEditHPGained3">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
           <item row="4" column="1">
            <widget class="QLineEdit" name="lineEditClass4">
             <property name="minimumSize">
@@ -1107,48 +935,6 @@
               <width>200</width>
               <height>0</height>
              </size>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSave4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="5">
-           <widget class="QLineEdit" name="lineEditClassRefSave4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="6">
-           <widget class="QLineEdit" name="lineEditClassWillSave4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="7">
-           <widget class="QLineEdit" name="lineEditClassLevels4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="8">
-           <widget class="QLineEdit" name="lineEditHitDie4">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="9">
-           <widget class="QLineEdit" name="lineEditHPGained4">
-            <property name="text">
-             <string>0</string>
             </property>
            </widget>
           </item>
@@ -1162,57 +948,8 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="2">
-           <widget class="QLineEdit" name="lineEditClassSkills5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="3">
-           <widget class="QLineEdit" name="lineEditClassBAB5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSave5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="5">
-           <widget class="QLineEdit" name="lineEditClassRefSave5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="6">
-           <widget class="QLineEdit" name="lineEditClassWillSave5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="7">
-           <widget class="QLineEdit" name="lineEditClassLevels5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
           <item row="5" column="8">
            <widget class="QLineEdit" name="lineEditHitDie5">
-            <property name="text">
-             <string>0</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="9">
-           <widget class="QLineEdit" name="lineEditHPGained5">
             <property name="text">
              <string>0</string>
             </property>
@@ -1244,8 +981,8 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="3">
-           <widget class="QLineEdit" name="lineEditClassBABTotal">
+          <item row="6" column="4">
+           <widget class="QLineEdit" name="lineEditClassFortSaveTotal">
             <property name="text">
              <string>0</string>
             </property>
@@ -1254,13 +991,13 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="4">
-           <widget class="QLineEdit" name="lineEditClassFortSaveTotal">
-            <property name="text">
-             <string>0</string>
-            </property>
-            <property name="readOnly">
-             <bool>true</bool>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditClass1">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -1287,16 +1024,6 @@
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEditClass1">
-            <property name="minimumSize">
-             <size>
-              <width>200</width>
-              <height>0</height>
-             </size>
             </property>
            </widget>
           </item>
@@ -1400,6 +1127,139 @@
              <bool>true</bool>
             </property>
            </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QSpinBox" name="spinBoxClassSkills1"/>
+          </item>
+          <item row="1" column="3">
+           <widget class="QSpinBox" name="spinBoxClassBAB1"/>
+          </item>
+          <item row="1" column="4">
+           <widget class="QSpinBox" name="spinBoxClassFortSave1"/>
+          </item>
+          <item row="1" column="5">
+           <widget class="QSpinBox" name="spinBoxClassRefSave1"/>
+          </item>
+          <item row="1" column="6">
+           <widget class="QSpinBox" name="spinBoxClassWillSave1"/>
+          </item>
+          <item row="1" column="7">
+           <widget class="QSpinBox" name="spinBoxClassLevels1"/>
+          </item>
+          <item row="1" column="9">
+           <widget class="QSpinBox" name="spinBoxHPGained1"/>
+          </item>
+          <item row="4" column="8">
+           <widget class="QLineEdit" name="lineEditHitDie4">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="8">
+           <widget class="QLineEdit" name="lineEditHitDie3">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="8">
+           <widget class="QLineEdit" name="lineEditHitDie2">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="8">
+           <widget class="QLineEdit" name="lineEditHitDie1">
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QSpinBox" name="spinBoxClassSkills2"/>
+          </item>
+          <item row="3" column="2">
+           <widget class="QSpinBox" name="spinBoxClassSkills3"/>
+          </item>
+          <item row="4" column="2">
+           <widget class="QSpinBox" name="spinBoxClassSkills4"/>
+          </item>
+          <item row="4" column="3">
+           <widget class="QSpinBox" name="spinBoxClassBAB4"/>
+          </item>
+          <item row="3" column="3">
+           <widget class="QSpinBox" name="spinBoxClassBAB3"/>
+          </item>
+          <item row="2" column="3">
+           <widget class="QSpinBox" name="spinBoxClassBAB2"/>
+          </item>
+          <item row="2" column="4">
+           <widget class="QSpinBox" name="spinBoxClassFortSave2"/>
+          </item>
+          <item row="3" column="4">
+           <widget class="QSpinBox" name="spinBoxClassFortSave3"/>
+          </item>
+          <item row="4" column="4">
+           <widget class="QSpinBox" name="spinBoxClassFortSave4"/>
+          </item>
+          <item row="4" column="5">
+           <widget class="QSpinBox" name="spinBoxClassRefSave4"/>
+          </item>
+          <item row="3" column="5">
+           <widget class="QSpinBox" name="spinBoxClassRefSave3"/>
+          </item>
+          <item row="2" column="5">
+           <widget class="QSpinBox" name="spinBoxClassRefSave2"/>
+          </item>
+          <item row="2" column="6">
+           <widget class="QSpinBox" name="spinBoxClassWillSave2"/>
+          </item>
+          <item row="3" column="6">
+           <widget class="QSpinBox" name="spinBoxClassWillSave3"/>
+          </item>
+          <item row="4" column="6">
+           <widget class="QSpinBox" name="spinBoxClassWillSave4"/>
+          </item>
+          <item row="4" column="7">
+           <widget class="QSpinBox" name="spinBoxClassLevels4"/>
+          </item>
+          <item row="3" column="7">
+           <widget class="QSpinBox" name="spinBoxClassLevels3"/>
+          </item>
+          <item row="2" column="7">
+           <widget class="QSpinBox" name="spinBoxClassLevels2"/>
+          </item>
+          <item row="2" column="9">
+           <widget class="QSpinBox" name="spinBoxHPGained2"/>
+          </item>
+          <item row="3" column="9">
+           <widget class="QSpinBox" name="spinBoxHPGained3"/>
+          </item>
+          <item row="4" column="9">
+           <widget class="QSpinBox" name="spinBoxHPGained4"/>
+          </item>
+          <item row="5" column="2">
+           <widget class="QSpinBox" name="spinBoxClassSkills5"/>
+          </item>
+          <item row="5" column="3">
+           <widget class="QSpinBox" name="spinBoxClassBAB5"/>
+          </item>
+          <item row="5" column="4">
+           <widget class="QSpinBox" name="spinBoxClassFortSave5"/>
+          </item>
+          <item row="5" column="5">
+           <widget class="QSpinBox" name="spinBoxClassRefSave5"/>
+          </item>
+          <item row="5" column="6">
+           <widget class="QSpinBox" name="spinBoxClassWillSave5"/>
+          </item>
+          <item row="5" column="7">
+           <widget class="QSpinBox" name="spinBoxClassLevels5"/>
+          </item>
+          <item row="5" column="9">
+           <widget class="QSpinBox" name="spinBoxHPGained5"/>
           </item>
          </layout>
         </item>
@@ -1550,50 +1410,11 @@
   <tabstop>spinBoxChaEnh</tabstop>
   <tabstop>spinBoxChaMisc</tabstop>
   <tabstop>lineEditClass1</tabstop>
-  <tabstop>lineEditClassSkills1</tabstop>
-  <tabstop>lineEditClassBAB1</tabstop>
-  <tabstop>lineEditClassFortSave1</tabstop>
-  <tabstop>lineEditClassRefSave1</tabstop>
-  <tabstop>lineEditClassWillSave1</tabstop>
-  <tabstop>lineEditClassLevels1</tabstop>
-  <tabstop>lineEditHitDie1</tabstop>
-  <tabstop>lineEditHPGained1</tabstop>
   <tabstop>lineEditClass2</tabstop>
-  <tabstop>lineEditClassSkills2</tabstop>
-  <tabstop>lineEditClassBAB2</tabstop>
-  <tabstop>lineEditClassFortSave2</tabstop>
-  <tabstop>lineEditClassRefSave2</tabstop>
-  <tabstop>lineEditClassWillSave2</tabstop>
-  <tabstop>lineEditClassLevels2</tabstop>
-  <tabstop>lineEditHitDie2</tabstop>
-  <tabstop>lineEditHPGained2</tabstop>
   <tabstop>lineEditClass3</tabstop>
-  <tabstop>lineEditClassSkills3</tabstop>
-  <tabstop>lineEditClassBAB3</tabstop>
-  <tabstop>lineEditClassFortSave3</tabstop>
-  <tabstop>lineEditClassRefSave3</tabstop>
-  <tabstop>lineEditClassWillSave3</tabstop>
-  <tabstop>lineEditClassLevels3</tabstop>
-  <tabstop>lineEditHitDie3</tabstop>
-  <tabstop>lineEditHPGained3</tabstop>
   <tabstop>lineEditClass4</tabstop>
-  <tabstop>lineEditClassSkills4</tabstop>
-  <tabstop>lineEditClassBAB4</tabstop>
-  <tabstop>lineEditClassFortSave4</tabstop>
-  <tabstop>lineEditClassRefSave4</tabstop>
-  <tabstop>lineEditClassWillSave4</tabstop>
-  <tabstop>lineEditClassLevels4</tabstop>
-  <tabstop>lineEditHitDie4</tabstop>
-  <tabstop>lineEditHPGained4</tabstop>
   <tabstop>lineEditClass5</tabstop>
-  <tabstop>lineEditClassSkills5</tabstop>
-  <tabstop>lineEditClassBAB5</tabstop>
-  <tabstop>lineEditClassFortSave5</tabstop>
-  <tabstop>lineEditClassRefSave5</tabstop>
-  <tabstop>lineEditClassWillSave5</tabstop>
-  <tabstop>lineEditClassLevels5</tabstop>
   <tabstop>lineEditHitDie5</tabstop>
-  <tabstop>lineEditHPGained5</tabstop>
   <tabstop>lineEditChaTotal</tabstop>
   <tabstop>lineEditConTotal</tabstop>
   <tabstop>lineEditPointsSpent</tabstop>
