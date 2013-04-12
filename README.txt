@@ -8,9 +8,9 @@ Compiling Instructions:
 
 Linux:
 
-Dependancies:
+Dependancies (take these with a grain of salt, I havn't checked these exactly):
 For Debian/Ubuntu
-    qt4-qmake
+    qt4-qmake libqt4-dev libqtcore4 libqtgui4
 
 For Arch:
     qt-4
