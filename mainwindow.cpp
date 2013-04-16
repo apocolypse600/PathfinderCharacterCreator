@@ -65,9 +65,56 @@ void MainWindow::resetValues()
     ui->spinBoxChaBase->setValue(10);
     ui->spinBoxChaInh->setValue(0);
     ui->spinBoxChaEnh->setValue(0);
-    ui->spinBoxChaMisc->setValue(0);
-
+    ui->spinBoxChaMisc->setValue(0); 
     ui->lineEditPointsSpent->setText("0");
+
+    ui->lineEditClass1->setText("");
+    ui->spinBoxClassSkills1->setValue(0);
+    ui->spinBoxClassBAB1->setValue(0);
+    ui->spinBoxClassFortSave1->setValue(0);
+    ui->spinBoxClassRefSave1->setValue(0);
+    ui->spinBoxClassWillSave1->setValue(0);
+    ui->spinBoxClassLevels1->setValue(0);
+    ui->lineEditHitDie1->setText("");
+    ui->spinBoxHPGained1->setValue(0);
+    ui->lineEditClass2->setText("");
+    ui->spinBoxClassSkills2->setValue(0);
+    ui->spinBoxClassBAB2->setValue(0);
+    ui->spinBoxClassFortSave2->setValue(0);
+    ui->spinBoxClassRefSave2->setValue(0);
+    ui->spinBoxClassWillSave2->setValue(0);
+    ui->spinBoxClassLevels2->setValue(0);
+    ui->lineEditHitDie2->setText("");
+    ui->spinBoxHPGained2->setValue(0);
+    ui->lineEditClass3->setText("");
+    ui->spinBoxClassSkills3->setValue(0);
+    ui->spinBoxClassBAB3->setValue(0);
+    ui->spinBoxClassFortSave3->setValue(0);
+    ui->spinBoxClassRefSave3->setValue(0);
+    ui->spinBoxClassWillSave3->setValue(0);
+    ui->spinBoxClassLevels3->setValue(0);
+    ui->lineEditHitDie3->setText("");
+    ui->spinBoxHPGained3->setValue(0);
+    ui->lineEditClass4->setText("");
+    ui->spinBoxClassSkills4->setValue(0);
+    ui->spinBoxClassBAB4->setValue(0);
+    ui->spinBoxClassFortSave4->setValue(0);
+    ui->spinBoxClassRefSave4->setValue(0);
+    ui->spinBoxClassWillSave4->setValue(0);
+    ui->spinBoxClassLevels4->setValue(0);
+    ui->lineEditHitDie4->setText("");
+    ui->spinBoxHPGained4->setValue(0);
+    ui->lineEditClass5->setText("");
+    ui->spinBoxClassSkills5->setValue(0);
+    ui->spinBoxClassBAB5->setValue(0);
+    ui->spinBoxClassFortSave5->setValue(0);
+    ui->spinBoxClassRefSave5->setValue(0);
+    ui->spinBoxClassWillSave5->setValue(0);
+    ui->spinBoxClassLevels5->setValue(0);
+    ui->lineEditHitDie5->setText("");
+    ui->spinBoxHPGained5->setValue(0);
+    ui->checkBoxFavoured1->setChecked(true);
+
 
 }
 
@@ -356,6 +403,64 @@ void MainWindow::on_actionOpen_triggered()
             ui->spinBoxChaEnh->setValue(in.readLine().toInt());
             ui->spinBoxChaMisc->setValue(in.readLine().toInt());
 
+            in.readLine();
+
+            ui->lineEditClass1->setText(in.readLine());
+            ui->spinBoxClassSkills1->setValue(in.readLine().toInt());
+            ui->spinBoxClassBAB1->setValue(in.readLine().toInt());
+            ui->spinBoxClassFortSave1->setValue(in.readLine().toInt());
+            ui->spinBoxClassRefSave1->setValue(in.readLine().toInt());
+            ui->spinBoxClassWillSave1->setValue(in.readLine().toInt());
+            ui->spinBoxClassLevels1->setValue(in.readLine().toInt());
+            ui->lineEditHitDie1->setText(in.readLine());
+            ui->spinBoxHPGained1->setValue(in.readLine().toInt());
+            ui->lineEditClass2->setText(in.readLine());
+            ui->spinBoxClassSkills2->setValue(in.readLine().toInt());
+            ui->spinBoxClassBAB2->setValue(in.readLine().toInt());
+            ui->spinBoxClassFortSave2->setValue(in.readLine().toInt());
+            ui->spinBoxClassRefSave2->setValue(in.readLine().toInt());
+            ui->spinBoxClassWillSave2->setValue(in.readLine().toInt());
+            ui->spinBoxClassLevels2->setValue(in.readLine().toInt());
+            ui->lineEditHitDie2->setText(in.readLine());
+            ui->spinBoxHPGained2->setValue(in.readLine().toInt());
+            ui->lineEditClass3->setText(in.readLine());
+            ui->spinBoxClassSkills3->setValue(in.readLine().toInt());
+            ui->spinBoxClassBAB3->setValue(in.readLine().toInt());
+            ui->spinBoxClassFortSave3->setValue(in.readLine().toInt());
+            ui->spinBoxClassRefSave3->setValue(in.readLine().toInt());
+            ui->spinBoxClassWillSave3->setValue(in.readLine().toInt());
+            ui->spinBoxClassLevels3->setValue(in.readLine().toInt());
+            ui->lineEditHitDie3->setText(in.readLine());
+            ui->spinBoxHPGained3->setValue(in.readLine().toInt());
+            ui->lineEditClass4->setText(in.readLine());
+            ui->spinBoxClassSkills4->setValue(in.readLine().toInt());
+            ui->spinBoxClassBAB4->setValue(in.readLine().toInt());
+            ui->spinBoxClassFortSave4->setValue(in.readLine().toInt());
+            ui->spinBoxClassRefSave4->setValue(in.readLine().toInt());
+            ui->spinBoxClassWillSave4->setValue(in.readLine().toInt());
+            ui->spinBoxClassLevels4->setValue(in.readLine().toInt());
+            ui->lineEditHitDie4->setText(in.readLine());
+            ui->spinBoxHPGained4->setValue(in.readLine().toInt());
+            ui->lineEditClass5->setText(in.readLine());
+            ui->spinBoxClassSkills5->setValue(in.readLine().toInt());
+            ui->spinBoxClassBAB5->setValue(in.readLine().toInt());
+            ui->spinBoxClassFortSave5->setValue(in.readLine().toInt());
+            ui->spinBoxClassRefSave5->setValue(in.readLine().toInt());
+            ui->spinBoxClassWillSave5->setValue(in.readLine().toInt());
+            ui->spinBoxClassLevels5->setValue(in.readLine().toInt());
+            ui->lineEditHitDie5->setText(in.readLine());
+            ui->spinBoxHPGained5->setValue(in.readLine().toInt());
+
+            switch(in.readLine().toInt())
+            {
+                case 1 : ui->checkBoxFavoured1->setChecked(true); break;
+                case 2 : ui->checkBoxFavoured2->setChecked(true); break;
+                case 3 : ui->checkBoxFavoured3->setChecked(true); break;
+                case 4 : ui->checkBoxFavoured4->setChecked(true); break;
+                case 5 : ui->checkBoxFavoured5->setChecked(true); break;
+                //default :
+            }
+
             sFile.close();
         }
 
@@ -407,7 +512,75 @@ void MainWindow::on_actionSave_triggered()
             << ui->spinBoxChaBase->value() << '\n'
             << ui->spinBoxChaInh->value() << '\n'
             << ui->spinBoxChaEnh->value() << '\n'
-            << ui->spinBoxChaMisc->value();
+            << ui->spinBoxChaMisc->value() <<'\n'
+            << '\n'
+            << ui->lineEditClass1->text() << '\n'
+            << ui->spinBoxClassSkills1->value() << '\n'
+            << ui->spinBoxClassBAB1->value() << '\n'
+            << ui->spinBoxClassFortSave1->value() << '\n'
+            << ui->spinBoxClassRefSave1->value() << '\n'
+            << ui->spinBoxClassWillSave1->value() << '\n'
+            << ui->spinBoxClassLevels1->value() << '\n'
+            << ui->lineEditHitDie1->text() << '\n'
+            << ui->spinBoxHPGained1->value() << '\n'
+            << ui->lineEditClass2->text() << '\n'
+            << ui->spinBoxClassSkills2->value() << '\n'
+            << ui->spinBoxClassBAB2->value() << '\n'
+            << ui->spinBoxClassFortSave2->value() << '\n'
+            << ui->spinBoxClassRefSave2->value() << '\n'
+            << ui->spinBoxClassWillSave2->value() << '\n'
+            << ui->spinBoxClassLevels2->value() << '\n'
+            << ui->lineEditHitDie2->text() << '\n'
+            << ui->spinBoxHPGained2->value() << '\n'
+            << ui->lineEditClass3->text() << '\n'
+            << ui->spinBoxClassSkills3->value() << '\n'
+            << ui->spinBoxClassBAB3->value() << '\n'
+            << ui->spinBoxClassFortSave3->value() << '\n'
+            << ui->spinBoxClassRefSave3->value() << '\n'
+            << ui->spinBoxClassWillSave3->value() << '\n'
+            << ui->spinBoxClassLevels3->value() << '\n'
+            << ui->lineEditHitDie3->text() << '\n'
+            << ui->spinBoxHPGained3->value() << '\n'
+            << ui->lineEditClass4->text() << '\n'
+            << ui->spinBoxClassSkills4->value() << '\n'
+            << ui->spinBoxClassBAB4->value() << '\n'
+            << ui->spinBoxClassFortSave4->value() << '\n'
+            << ui->spinBoxClassRefSave4->value() << '\n'
+            << ui->spinBoxClassWillSave4->value() << '\n'
+            << ui->spinBoxClassLevels4->value() << '\n'
+            << ui->lineEditHitDie4->text() << '\n'
+            << ui->spinBoxHPGained4->value() << '\n'
+            << ui->lineEditClass5->text() << '\n'
+            << ui->spinBoxClassSkills5->value() << '\n'
+            << ui->spinBoxClassBAB5->value() << '\n'
+            << ui->spinBoxClassFortSave5->value() << '\n'
+            << ui->spinBoxClassRefSave5->value() << '\n'
+            << ui->spinBoxClassWillSave5->value() << '\n'
+            << ui->spinBoxClassLevels5->value() << '\n'
+            << ui->lineEditHitDie5->text() << '\n'
+            << ui->spinBoxHPGained5->value() << '\n';
+
+            if (ui->checkBoxFavoured1->isChecked())
+            {
+                out << 1 << '\n';
+            }
+            else if (ui->checkBoxFavoured2->isChecked())
+            {
+                out << 2 << '\n';
+            }
+            else if (ui->checkBoxFavoured3->isChecked())
+            {
+                out << 3 << '\n';
+            }
+            else if (ui->checkBoxFavoured4->isChecked())
+            {
+                out << 4 << '\n';
+            }
+            else
+            {
+                out << 5 << '\n';
+            }
+
 
         sFile.flush();
         sFile.close();
