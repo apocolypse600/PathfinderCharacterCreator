@@ -1270,7 +1270,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit"/>
+           <widget class="QLineEdit" name="lineEdit">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer_2">
@@ -1293,7 +1297,11 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_3"/>
+           <widget class="QLineEdit" name="lineEdit_3">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item>
            <spacer name="horizontalSpacer">
@@ -1316,12 +1324,16 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_2"/>
+           <widget class="QLineEdit" name="lineEdit_2">
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>
         <item>
-         <widget class="QTableWidget" name="tableWidget">
+         <widget class="QTableWidget" name="tableSkills">
           <property name="alternatingRowColors">
            <bool>true</bool>
           </property>
@@ -1337,32 +1349,180 @@
           <property name="cornerButtonEnabled">
            <bool>false</bool>
           </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>false</bool>
+          </attribute>
           <attribute name="horizontalHeaderHighlightSections">
            <bool>true</bool>
           </attribute>
           <row>
            <property name="text">
-            <string>Climbing</string>
+            <string>Acrobatics</string>
            </property>
           </row>
           <row>
            <property name="text">
-            <string>New Row</string>
+            <string>Appraise</string>
            </property>
           </row>
           <row>
            <property name="text">
-            <string>New Row</string>
+            <string>Bluff</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Climb</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Craft</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Diplomacy</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Disable Device</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Disguise</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Escape Artist</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Fly</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Handle Animal</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Heal</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Intimidate</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Arcana)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Dungeoneering)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Engineering)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Geography)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (History)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Local)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Nature)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Nobility)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Planes)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Knowledge (Religion)</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Linguistics</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Perception</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Profession</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Ride</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Sense Motive</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Sleight of Hand</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Spellcraft</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Survival</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Swim</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>Use Magic Device</string>
            </property>
           </row>
           <column>
            <property name="text">
-            <string>ClassSkillCheckbox</string>
-           </property>
-          </column>
-          <column>
-           <property name="text">
-            <string>SkillName</string>
+            <string/>
            </property>
           </column>
           <column>
@@ -1385,6 +1545,97 @@
             <string>Misc</string>
            </property>
           </column>
+          <item row="0" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="textAlignment">
+            <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="0">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="checkState">
+            <enum>Unchecked</enum>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>

@@ -14,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionSave_As->setShortcuts(QKeySequence::SaveAs);
     ui->actionOpen->setShortcuts(QKeySequence::Open);
     ui->actionNew->setShortcuts(QKeySequence::New);
+
+    ui->tableSkills->horizontalHeader()->setResizeMode( QHeaderView::Stretch);
 }
 
 MainWindow::~MainWindow()
