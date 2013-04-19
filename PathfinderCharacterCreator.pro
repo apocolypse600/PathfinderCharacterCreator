@@ -13,11 +13,14 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    manualdiceroller.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    manualdiceroller.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    manualdiceroller.ui
 
 OTHER_FILES += \
     README.md

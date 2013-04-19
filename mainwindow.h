@@ -5,6 +5,7 @@
 #include <QtCore>
 #include <QtGui>
 #include <QFileDialog>
+#include "manualdiceroller.h"
 
 namespace Ui {
 class MainWindow;
@@ -101,6 +102,8 @@ private slots:
     void on_spinBoxHPGained4_valueChanged();
     void on_spinBoxHPGained5_valueChanged();
 
+    void on_actionDice_Roller_triggered();
+
 private:
     Ui::MainWindow *ui;
     void updateStr();
@@ -119,6 +122,8 @@ private:
     void updateHPGained();
     int calculateAttributeCost(int abilityScore) const;
     void updatePointsSpent();
+
+    ManualDiceRoller *manualDiceRollerDialog;
 
     QString filename = "";
     const QString VERSION = "0.0.2";
