@@ -16,7 +16,22 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionOpen->setShortcuts(QKeySequence::Open);
     ui->actionNew->setShortcuts(QKeySequence::New);
 
-    ui->tableSkills->horizontalHeader()->setResizeMode( QHeaderView::Stretch);
+    ui->tableSkills->setColumnWidth(0,10);
+    //ui->tableSkills->horizontalHeader()->setResizeMode( QHeaderView::Stretch);
+    //ui->tableSkills->setColumnWidth(0,10);
+
+    for(int i = 0; i < NUMBEROFSKILLS; i++)
+    {
+        QSpinBox *spinBoxClassRanks = new QSpinBox;
+        QSpinBox *spinBoxClassMisc = new QSpinBox;
+        QCheckBox *checkBoxClassSkill = new QCheckBox;
+
+        ui->tableSkills->setCellWidget(i,0,checkBoxClassSkill);
+        ui->tableSkills->setCellWidget(i,3,spinBoxClassRanks);
+        ui->tableSkills->setCellWidget(i,5,spinBoxClassMisc);
+    }
+
+
 }
 
 MainWindow::~MainWindow()

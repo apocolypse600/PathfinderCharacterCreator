@@ -125,6 +125,8 @@ private:
 
     ManualDiceRoller *manualDiceRollerDialog;
 
+    const int NUMBEROFSKILLS = 33;
+
     QString filename = "";
     const QString VERSION = "0.0.2";
 };
