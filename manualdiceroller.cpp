@@ -9,6 +9,7 @@ ManualDiceRoller::ManualDiceRoller(QWidget *parent) :
 
     srand(time(0));
     clipboard = QApplication::clipboard();
+    setWindowTitle("Manual Dice Roller");
 }
 
 ManualDiceRoller::~ManualDiceRoller()
