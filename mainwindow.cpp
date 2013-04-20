@@ -140,6 +140,7 @@ void MainWindow::resetValues()
     ui->spinBoxHPGained5->setValue(0);
     ui->checkBoxFavoured1->setChecked(true);
 
+    updateClassTable();
 
 }
 
@@ -160,8 +161,13 @@ void MainWindow::updateStr()
     int newStrTotal = ui->spinBoxStrBase->value() + ui->spinBoxStrInh->value()
             + ui->spinBoxStrEnh->value() + ui->spinBoxStrMisc->value();
 
+    QString newStrMod = QString::number(newStrTotal/2 -5);
+
     ui->lineEditStrTotal->setText(QString::number(newStrTotal));
-    ui->lineEditStrMod->setText(QString::number(newStrTotal/2 -5));
+    ui->lineEditStrMod->setText(newStrMod);
+
+    ui->tableSkills->item(3,4)->setText(newStrMod);
+    ui->tableSkills->item(33,4)->setText(newStrMod);
 }
 
 void MainWindow::updateDex()
@@ -169,8 +175,18 @@ void MainWindow::updateDex()
     int newDexTotal = ui->spinBoxDexBase->value() + ui->spinBoxDexInh->value()
             + ui->spinBoxDexEnh->value() + ui->spinBoxDexMisc->value();
 
+    QString newDexMod = QString::number(newDexTotal/2 -5);
+
     ui->lineEditDexTotal->setText(QString::number(newDexTotal));
-    ui->lineEditDexMod->setText(QString::number(newDexTotal/2 -5));
+    ui->lineEditDexMod->setText(newDexMod);
+
+    ui->tableSkills->item(0,4)->setText(newDexMod);
+    ui->tableSkills->item(6,4)->setText(newDexMod);
+    ui->tableSkills->item(8,4)->setText(newDexMod);
+    ui->tableSkills->item(9,4)->setText(newDexMod);
+    ui->tableSkills->item(27,4)->setText(newDexMod);
+    ui->tableSkills->item(29,4)->setText(newDexMod);
+    ui->tableSkills->item(31,4)->setText(newDexMod);
 }
 
 void MainWindow::updateCon()
@@ -187,8 +203,21 @@ void MainWindow::updateInt()
     int newIntTotal = ui->spinBoxIntBase->value() + ui->spinBoxIntInh->value()
             + ui->spinBoxIntEnh->value() + ui->spinBoxIntMisc->value();
 
+    QString newIntMod = QString::number(newIntTotal/2 -5);
+
     ui->lineEditIntTotal->setText(QString::number(newIntTotal));
-    ui->lineEditIntMod->setText(QString::number(newIntTotal/2 -5));
+    ui->lineEditIntMod->setText(newIntMod);
+
+    ui->tableSkills->item(1,4)->setText(newIntMod);
+    ui->tableSkills->item(4,4)->setText(newIntMod);
+    ui->tableSkills->item(30,4)->setText(newIntMod);
+
+    //All the knowledge skills are based off int, + linguistics (23)
+    for(int i = 13 ; i<=23 ; i++)
+    {
+        ui->tableSkills->item(i,4)->setText(newIntMod);
+    }
+
 }
 
 void MainWindow::updateWis()
@@ -196,8 +225,16 @@ void MainWindow::updateWis()
     int newWisTotal = ui->spinBoxWisBase->value() + ui->spinBoxWisInh->value()
             + ui->spinBoxWisEnh->value() + ui->spinBoxWisMisc->value();
 
+    QString newWisMod = QString::number(newWisTotal/2 -5);
+
     ui->lineEditWisTotal->setText(QString::number(newWisTotal));
-    ui->lineEditWisMod->setText(QString::number(newWisTotal/2 -5));
+    ui->lineEditWisMod->setText(newWisMod);
+
+    ui->tableSkills->item(11,4)->setText(newWisMod);
+    ui->tableSkills->item(24,4)->setText(newWisMod);
+    ui->tableSkills->item(26,4)->setText(newWisMod);
+    ui->tableSkills->item(28,4)->setText(newWisMod);
+    ui->tableSkills->item(32,4)->setText(newWisMod);
 }
 
 void MainWindow::updateCha()
@@ -205,8 +242,18 @@ void MainWindow::updateCha()
     int newChaTotal = ui->spinBoxChaBase->value() + ui->spinBoxChaInh->value()
             + ui->spinBoxChaEnh->value() + ui->spinBoxChaMisc->value();
 
+    QString newChaMod = QString::number(newChaTotal/2 -5);
+
     ui->lineEditChaTotal->setText(QString::number(newChaTotal));
-    ui->lineEditChaMod->setText(QString::number(newChaTotal/2 -5));
+    ui->lineEditChaMod->setText(newChaMod);
+
+    ui->tableSkills->item(2,4)->setText(newChaMod);
+    ui->tableSkills->item(5,4)->setText(newChaMod);
+    ui->tableSkills->item(7,4)->setText(newChaMod);
+    ui->tableSkills->item(10,4)->setText(newChaMod);
+    ui->tableSkills->item(12,4)->setText(newChaMod);
+    ui->tableSkills->item(25,4)->setText(newChaMod);
+    ui->tableSkills->item(34,4)->setText(newChaMod);
 }
 
 //The slots that call the above functions
@@ -491,6 +538,7 @@ void MainWindow::on_actionOpen_triggered()
 
         ui->statusBar->showMessage(filename + " successfully opened",5000); //timeout in milisec
 
+        updateClassTable();
         updatePointsSpent();
     }
 }
@@ -888,7 +936,7 @@ void MainWindow::updateClassTable()
     int totalPoints = 0;
     for(int row = 0; row < NUMBEROFSKILLS; row++)
     {
-        int bonus = 0;
+        int bonus = 0;// bonus is the trained skill bonus (for class skills). It only counts if atleast one skill point is invested
         if (static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->isChecked() && static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->value() >= 1)
         {
             bonus = 3;
@@ -897,7 +945,7 @@ void MainWindow::updateClassTable()
         int ranks = static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->value();
         totalPoints += ranks;
 
-        ui->tableSkills->item(row,2)->setText(QString::number(ranks + static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->value() + bonus));
+        ui->tableSkills->item(row,2)->setText(QString::number(ranks + static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->value() + ui->tableSkills->item(row,4)->text().toInt() + bonus));
     }
 
     ui->lineEditSkillPointsSpent->setText(QString::number(totalPoints));
