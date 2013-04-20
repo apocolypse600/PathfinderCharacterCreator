@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,9 +15,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionOpen->setShortcuts(QKeySequence::Open);
     ui->actionNew->setShortcuts(QKeySequence::New);
 
-    ui->tableSkills->setColumnWidth(0,10);
-    //ui->tableSkills->horizontalHeader()->setResizeMode( QHeaderView::Stretch);
-    //ui->tableSkills->setColumnWidth(0,10);
+    ui->tableSkills->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
 
     for(int i = 0; i < NUMBEROFSKILLS; i++)
     {
@@ -26,11 +23,21 @@ MainWindow::MainWindow(QWidget *parent) :
         QSpinBox *spinBoxClassMisc = new QSpinBox;
         QCheckBox *checkBoxClassSkill = new QCheckBox;
 
+        /*QWidget* wdg = new QWidget;
+        QHBoxLayout* layout = new QHBoxLayout(wdg);
+        layout->addWidget(checkBoxClassSkill);
+        layout->setAlignment( Qt::AlignCenter );
+        layout->setSpacing( 0 );
+        wdg->setLayout(layout);*/
+
         ui->tableSkills->setCellWidget(i,0,checkBoxClassSkill);
         ui->tableSkills->setCellWidget(i,3,spinBoxClassRanks);
         ui->tableSkills->setCellWidget(i,5,spinBoxClassMisc);
-    }
 
+        connect( spinBoxClassRanks, SIGNAL(valueChanged(int)),this,SLOT(updateClassTable()) );
+        connect( spinBoxClassMisc, SIGNAL(valueChanged(int)),this,SLOT(updateClassTable()) );
+        connect( checkBoxClassSkill, SIGNAL(clicked()),this,SLOT(updateClassTable()) );
+    }
 
 }
 
@@ -490,120 +497,128 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-    QFile sFile(filename);
-    if(sFile.open(QFile::WriteOnly | QFile::Text))
+    if(filename != "")
     {
-        QTextStream out(&sFile);
 
-        out <<  ui->lineEditName->text() << '\n'
-            <<  ui->lineEditRace->text() << '\n'
-            <<  ui->lineEditSize->text() << '\n'
-            <<  ui->lineEditGender->text() << '\n'
-            <<  ui->lineEditHeight->text() << '\n'
-            <<  ui->lineEditWeight->text() << '\n'
-            <<  ui->lineEditAge->text() << '\n'
-            <<  ui->lineEditAlignment->text() << '\n'
-            <<  ui->lineEditDeity->text() << '\n'
-            <<  ui->lineEditBackgroundOccupation->text() << '\n'
-            <<  ui->lineEditLanguages->text() << '\n'
-            << '\n'
-            << ui->spinBoxStrBase->value() << '\n'
-            << ui->spinBoxStrInh->value() << '\n'
-            << ui->spinBoxStrEnh->value() << '\n'
-            << ui->spinBoxStrMisc->value() << '\n'
-            << ui->spinBoxDexBase->value() << '\n'
-            << ui->spinBoxDexInh->value() << '\n'
-            << ui->spinBoxDexEnh->value() << '\n'
-            << ui->spinBoxDexMisc->value() << '\n'
-            << ui->spinBoxConBase->value() << '\n'
-            << ui->spinBoxConInh->value() << '\n'
-            << ui->spinBoxConEnh->value() << '\n'
-            << ui->spinBoxConMisc->value() << '\n'
-            << ui->spinBoxIntBase->value() << '\n'
-            << ui->spinBoxIntInh->value() << '\n'
-            << ui->spinBoxIntEnh->value() << '\n'
-            << ui->spinBoxIntMisc->value() << '\n'
-            << ui->spinBoxWisBase->value() << '\n'
-            << ui->spinBoxWisInh->value() << '\n'
-            << ui->spinBoxWisEnh->value() << '\n'
-            << ui->spinBoxWisMisc->value() << '\n'
-            << ui->spinBoxChaBase->value() << '\n'
-            << ui->spinBoxChaInh->value() << '\n'
-            << ui->spinBoxChaEnh->value() << '\n'
-            << ui->spinBoxChaMisc->value() <<'\n'
-            << '\n'
-            << ui->lineEditClass1->text() << '\n'
-            << ui->spinBoxClassSkills1->value() << '\n'
-            << ui->spinBoxClassBAB1->value() << '\n'
-            << ui->spinBoxClassFortSave1->value() << '\n'
-            << ui->spinBoxClassRefSave1->value() << '\n'
-            << ui->spinBoxClassWillSave1->value() << '\n'
-            << ui->spinBoxClassLevels1->value() << '\n'
-            << ui->lineEditHitDie1->text() << '\n'
-            << ui->spinBoxHPGained1->value() << '\n'
-            << ui->lineEditClass2->text() << '\n'
-            << ui->spinBoxClassSkills2->value() << '\n'
-            << ui->spinBoxClassBAB2->value() << '\n'
-            << ui->spinBoxClassFortSave2->value() << '\n'
-            << ui->spinBoxClassRefSave2->value() << '\n'
-            << ui->spinBoxClassWillSave2->value() << '\n'
-            << ui->spinBoxClassLevels2->value() << '\n'
-            << ui->lineEditHitDie2->text() << '\n'
-            << ui->spinBoxHPGained2->value() << '\n'
-            << ui->lineEditClass3->text() << '\n'
-            << ui->spinBoxClassSkills3->value() << '\n'
-            << ui->spinBoxClassBAB3->value() << '\n'
-            << ui->spinBoxClassFortSave3->value() << '\n'
-            << ui->spinBoxClassRefSave3->value() << '\n'
-            << ui->spinBoxClassWillSave3->value() << '\n'
-            << ui->spinBoxClassLevels3->value() << '\n'
-            << ui->lineEditHitDie3->text() << '\n'
-            << ui->spinBoxHPGained3->value() << '\n'
-            << ui->lineEditClass4->text() << '\n'
-            << ui->spinBoxClassSkills4->value() << '\n'
-            << ui->spinBoxClassBAB4->value() << '\n'
-            << ui->spinBoxClassFortSave4->value() << '\n'
-            << ui->spinBoxClassRefSave4->value() << '\n'
-            << ui->spinBoxClassWillSave4->value() << '\n'
-            << ui->spinBoxClassLevels4->value() << '\n'
-            << ui->lineEditHitDie4->text() << '\n'
-            << ui->spinBoxHPGained4->value() << '\n'
-            << ui->lineEditClass5->text() << '\n'
-            << ui->spinBoxClassSkills5->value() << '\n'
-            << ui->spinBoxClassBAB5->value() << '\n'
-            << ui->spinBoxClassFortSave5->value() << '\n'
-            << ui->spinBoxClassRefSave5->value() << '\n'
-            << ui->spinBoxClassWillSave5->value() << '\n'
-            << ui->spinBoxClassLevels5->value() << '\n'
-            << ui->lineEditHitDie5->text() << '\n'
-            << ui->spinBoxHPGained5->value() << '\n';
+        QFile sFile(filename);
+        if(sFile.open(QFile::WriteOnly | QFile::Text))
+        {
+            QTextStream out(&sFile);
 
-            if (ui->checkBoxFavoured1->isChecked())
-            {
-                out << 1 << '\n';
-            }
-            else if (ui->checkBoxFavoured2->isChecked())
-            {
-                out << 2 << '\n';
-            }
-            else if (ui->checkBoxFavoured3->isChecked())
-            {
-                out << 3 << '\n';
-            }
-            else if (ui->checkBoxFavoured4->isChecked())
-            {
-                out << 4 << '\n';
-            }
-            else
-            {
-                out << 5 << '\n';
-            }
+           out <<  ui->lineEditName->text() << '\n'
+                <<  ui->lineEditRace->text() << '\n'
+                <<  ui->lineEditSize->text() << '\n'
+                <<  ui->lineEditGender->text() << '\n'
+                <<  ui->lineEditHeight->text() << '\n'
+                <<  ui->lineEditWeight->text() << '\n'
+                <<  ui->lineEditAge->text() << '\n'
+                <<  ui->lineEditAlignment->text() << '\n'
+                <<  ui->lineEditDeity->text() << '\n'
+                <<  ui->lineEditBackgroundOccupation->text() << '\n'
+                <<  ui->lineEditLanguages->text() << '\n'
+                << '\n'
+                << ui->spinBoxStrBase->value() << '\n'
+                << ui->spinBoxStrInh->value() << '\n'
+                << ui->spinBoxStrEnh->value() << '\n'
+                << ui->spinBoxStrMisc->value() << '\n'
+                << ui->spinBoxDexBase->value() << '\n'
+                << ui->spinBoxDexInh->value() << '\n'
+                << ui->spinBoxDexEnh->value() << '\n'
+                << ui->spinBoxDexMisc->value() << '\n'
+                << ui->spinBoxConBase->value() << '\n'
+                << ui->spinBoxConInh->value() << '\n'
+                << ui->spinBoxConEnh->value() << '\n'
+                << ui->spinBoxConMisc->value() << '\n'
+                << ui->spinBoxIntBase->value() << '\n'
+                << ui->spinBoxIntInh->value() << '\n'
+                << ui->spinBoxIntEnh->value() << '\n'
+                << ui->spinBoxIntMisc->value() << '\n'
+                << ui->spinBoxWisBase->value() << '\n'
+                << ui->spinBoxWisInh->value() << '\n'
+                << ui->spinBoxWisEnh->value() << '\n'
+                << ui->spinBoxWisMisc->value() << '\n'
+                << ui->spinBoxChaBase->value() << '\n'
+                << ui->spinBoxChaInh->value() << '\n'
+                << ui->spinBoxChaEnh->value() << '\n'
+                << ui->spinBoxChaMisc->value() <<'\n'
+                << '\n'
+                << ui->lineEditClass1->text() << '\n'
+                << ui->spinBoxClassSkills1->value() << '\n'
+                << ui->spinBoxClassBAB1->value() << '\n'
+                << ui->spinBoxClassFortSave1->value() << '\n'
+                << ui->spinBoxClassRefSave1->value() << '\n'
+                << ui->spinBoxClassWillSave1->value() << '\n'
+                << ui->spinBoxClassLevels1->value() << '\n'
+                << ui->lineEditHitDie1->text() << '\n'
+                << ui->spinBoxHPGained1->value() << '\n'
+                << ui->lineEditClass2->text() << '\n'
+                << ui->spinBoxClassSkills2->value() << '\n'
+                << ui->spinBoxClassBAB2->value() << '\n'
+                << ui->spinBoxClassFortSave2->value() << '\n'
+                << ui->spinBoxClassRefSave2->value() << '\n'
+                << ui->spinBoxClassWillSave2->value() << '\n'
+                << ui->spinBoxClassLevels2->value() << '\n'
+                << ui->lineEditHitDie2->text() << '\n'
+                << ui->spinBoxHPGained2->value() << '\n'
+                << ui->lineEditClass3->text() << '\n'
+                << ui->spinBoxClassSkills3->value() << '\n'
+                << ui->spinBoxClassBAB3->value() << '\n'
+                << ui->spinBoxClassFortSave3->value() << '\n'
+                << ui->spinBoxClassRefSave3->value() << '\n'
+                << ui->spinBoxClassWillSave3->value() << '\n'
+                << ui->spinBoxClassLevels3->value() << '\n'
+                << ui->lineEditHitDie3->text() << '\n'
+                << ui->spinBoxHPGained3->value() << '\n'
+                << ui->lineEditClass4->text() << '\n'
+                << ui->spinBoxClassSkills4->value() << '\n'
+                << ui->spinBoxClassBAB4->value() << '\n'
+                << ui->spinBoxClassFortSave4->value() << '\n'
+                << ui->spinBoxClassRefSave4->value() << '\n'
+                << ui->spinBoxClassWillSave4->value() << '\n'
+                << ui->spinBoxClassLevels4->value() << '\n'
+                << ui->lineEditHitDie4->text() << '\n'
+                << ui->spinBoxHPGained4->value() << '\n'
+                << ui->lineEditClass5->text() << '\n'
+                << ui->spinBoxClassSkills5->value() << '\n'
+                << ui->spinBoxClassBAB5->value() << '\n'
+                << ui->spinBoxClassFortSave5->value() << '\n'
+                << ui->spinBoxClassRefSave5->value() << '\n'
+                << ui->spinBoxClassWillSave5->value() << '\n'
+                << ui->spinBoxClassLevels5->value() << '\n'
+                << ui->lineEditHitDie5->text() << '\n'
+                << ui->spinBoxHPGained5->value() << '\n';
+
+                if (ui->checkBoxFavoured1->isChecked())
+                {
+                    out << 1 << '\n';
+                }
+                else if (ui->checkBoxFavoured2->isChecked())
+                {
+                    out << 2 << '\n';
+                }
+                else if (ui->checkBoxFavoured3->isChecked())
+                {
+                    out << 3 << '\n';
+                }
+                else if (ui->checkBoxFavoured4->isChecked())
+                {
+                    out << 4 << '\n';
+                }
+                else
+                {
+                    out << 5 << '\n';
+                }
 
 
-        sFile.flush();
-        sFile.close();
+            sFile.flush();
+            sFile.close();
 
-        ui->statusBar->showMessage(filename + " successfully saved",5000); //timeout in milisec
+            ui->statusBar->showMessage(filename + " successfully saved",5000); //timeout in milisec
+        }
+    }
+    else
+    {
+        on_actionSave_As_triggered();
     }
 }
 
@@ -631,6 +646,7 @@ void MainWindow::updateClassSkills()
             + ui->spinBoxClassSkills5->text().toInt();
 
     ui->lineEditClassSkillsTotal->setText(QString::number(newValue));
+    ui->lineEditSkillPointsAvailable->setText(QString::number(newValue));
 }
 
 void MainWindow::updateClassBAB()
@@ -865,4 +881,24 @@ void MainWindow::on_actionDice_Roller_triggered()
 {
     manualDiceRollerDialog = new ManualDiceRoller(this);
     manualDiceRollerDialog->show();
+}
+
+void MainWindow::updateClassTable()
+{
+    int totalPoints = 0;
+    for(int row = 0; row < NUMBEROFSKILLS; row++)
+    {
+        int bonus = 0;
+        if (static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->isChecked() && static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->value() >= 1)
+        {
+            bonus = 3;
+        }
+
+        int ranks = static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->value();
+        totalPoints += ranks;
+
+        ui->tableSkills->item(row,2)->setText(QString::number(ranks + static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->value() + bonus));
+    }
+
+    ui->lineEditSkillPointsSpent->setText(QString::number(totalPoints));
 }

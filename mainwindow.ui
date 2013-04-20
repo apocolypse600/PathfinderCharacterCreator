@@ -1270,7 +1270,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit">
+           <widget class="QLineEdit" name="lineEditSkillPointsAvailable">
+            <property name="text">
+             <string>0</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -1297,7 +1300,10 @@
            </widget>
           </item>
           <item>
-           <widget class="QLineEdit" name="lineEdit_3">
+           <widget class="QLineEdit" name="lineEditSkillPointsSpent">
+            <property name="text">
+             <string>0</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -1325,6 +1331,9 @@
           </item>
           <item>
            <widget class="QLineEdit" name="lineEdit_2">
+            <property name="text">
+             <string>0</string>
+            </property>
             <property name="readOnly">
              <bool>true</bool>
             </property>
@@ -1431,6 +1440,19 @@
             <string>Acrobatics</string>
            </property>
           </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="1" column="0">
            <property name="text">
             <string/>
@@ -1442,6 +1464,19 @@
           <item row="1" column="1">
            <property name="text">
             <string>Appraise</string>
+           </property>
+          </item>
+          <item row="1" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="1" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="2" column="0">
@@ -1457,6 +1492,19 @@
             <string>Bluff</string>
            </property>
           </item>
+          <item row="2" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="2" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="3" column="0">
            <property name="text">
             <string/>
@@ -1468,6 +1516,19 @@
           <item row="3" column="1">
            <property name="text">
             <string>Climb</string>
+           </property>
+          </item>
+          <item row="3" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="3" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="4" column="0">
@@ -1483,6 +1544,19 @@
             <string>Craft</string>
            </property>
           </item>
+          <item row="4" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="4" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="5" column="0">
            <property name="text">
             <string/>
@@ -1494,6 +1568,19 @@
           <item row="5" column="1">
            <property name="text">
             <string>Diplomacy</string>
+           </property>
+          </item>
+          <item row="5" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="5" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="6" column="0">
@@ -1509,6 +1596,19 @@
             <string>Disable Device</string>
            </property>
           </item>
+          <item row="6" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="6" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="7" column="0">
            <property name="text">
             <string/>
@@ -1520,6 +1620,19 @@
           <item row="7" column="1">
            <property name="text">
             <string>Disguise</string>
+           </property>
+          </item>
+          <item row="7" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="7" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="8" column="0">
@@ -1535,6 +1648,19 @@
             <string>Escape Artist</string>
            </property>
           </item>
+          <item row="8" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="8" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="9" column="0">
            <property name="text">
             <string/>
@@ -1546,6 +1672,19 @@
           <item row="9" column="1">
            <property name="text">
             <string>Fly</string>
+           </property>
+          </item>
+          <item row="9" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="9" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="10" column="0">
@@ -1561,6 +1700,19 @@
             <string>Handle Animal</string>
            </property>
           </item>
+          <item row="10" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="10" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="11" column="0">
            <property name="text">
             <string/>
@@ -1572,6 +1724,19 @@
           <item row="11" column="1">
            <property name="text">
             <string>Heak</string>
+           </property>
+          </item>
+          <item row="11" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="11" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="12" column="0">
@@ -1587,9 +1752,35 @@
             <string>Intimidate</string>
            </property>
           </item>
+          <item row="12" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="12" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="13" column="1">
            <property name="text">
             <string>Knowledge (Arcana)</string>
+           </property>
+          </item>
+          <item row="13" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="13" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="14" column="1">
@@ -1597,9 +1788,35 @@
             <string>Knowledge (Dungeoneering)</string>
            </property>
           </item>
+          <item row="14" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="14" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="15" column="1">
            <property name="text">
             <string>Knowledge (Engineering)</string>
+           </property>
+          </item>
+          <item row="15" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="15" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="16" column="1">
@@ -1607,9 +1824,35 @@
             <string>Knowledge (Geography)</string>
            </property>
           </item>
+          <item row="16" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="16" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="17" column="1">
            <property name="text">
             <string>Knowledge (History)</string>
+           </property>
+          </item>
+          <item row="17" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="17" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="18" column="1">
@@ -1617,9 +1860,35 @@
             <string>Knowledge (Local)</string>
            </property>
           </item>
+          <item row="18" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="18" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="19" column="1">
            <property name="text">
             <string>Knowledge (Nature)</string>
+           </property>
+          </item>
+          <item row="19" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="19" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="20" column="1">
@@ -1627,9 +1896,35 @@
             <string>Knowledge (Nobility)</string>
            </property>
           </item>
+          <item row="20" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="20" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="21" column="1">
            <property name="text">
             <string>Knowledge (Planes)</string>
+           </property>
+          </item>
+          <item row="21" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="21" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="22" column="1">
@@ -1637,9 +1932,35 @@
             <string>Knowledge (Religion)</string>
            </property>
           </item>
+          <item row="22" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="22" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="23" column="1">
            <property name="text">
             <string>Linguistsics</string>
+           </property>
+          </item>
+          <item row="23" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="23" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="24" column="1">
@@ -1647,9 +1968,35 @@
             <string>Perception</string>
            </property>
           </item>
+          <item row="24" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="24" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="25" column="1">
            <property name="text">
             <string>Profession</string>
+           </property>
+          </item>
+          <item row="25" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="25" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="26" column="1">
@@ -1657,9 +2004,35 @@
             <string>Ride</string>
            </property>
           </item>
+          <item row="26" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="26" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="27" column="1">
            <property name="text">
             <string>Sense Motive</string>
+           </property>
+          </item>
+          <item row="27" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="27" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="28" column="1">
@@ -1667,9 +2040,35 @@
             <string>Sleight of Hand</string>
            </property>
           </item>
+          <item row="28" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="28" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="29" column="1">
            <property name="text">
             <string>Spellcraft</string>
+           </property>
+          </item>
+          <item row="29" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="29" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
           <item row="30" column="1">
@@ -1677,14 +2076,53 @@
             <string>Survival</string>
            </property>
           </item>
+          <item row="30" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="30" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="31" column="1">
            <property name="text">
             <string>Swim</string>
            </property>
           </item>
+          <item row="31" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="31" column="4">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </item>
           <item row="32" column="1">
            <property name="text">
             <string>Use Magic Device</string>
+           </property>
+          </item>
+          <item row="32" column="2">
+           <property name="text">
+            <string>0</string>
+           </property>
+           <property name="flags">
+            <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+           </property>
+          </item>
+          <item row="32" column="4">
+           <property name="text">
+            <string>0</string>
            </property>
           </item>
          </widget>

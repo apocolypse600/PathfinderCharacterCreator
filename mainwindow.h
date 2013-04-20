@@ -104,6 +104,8 @@ private slots:
 
     void on_actionDice_Roller_triggered();
 
+    void updateClassTable();
+
 private:
     Ui::MainWindow *ui;
     void updateStr();
