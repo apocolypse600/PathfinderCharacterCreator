@@ -224,13 +224,6 @@ void MainWindow::on_actionNew_triggered()
     resetValues();
 }
 
-void MainWindow::on_actionExit_triggered()
-{
-
-}
-
-//Functions that handle the updating of the boxes on the Stats tab
-
 void MainWindow::updateStr()
 {
     int newStrTotal = ui->spinBoxStrBase->value() + ui->spinBoxStrInh->value()
@@ -624,7 +617,6 @@ void MainWindow::on_actionSave_As_triggered()
     {
         filename = readFilename;
         on_actionSave_triggered();
-
     }
 }
 
@@ -699,7 +691,7 @@ void MainWindow::updateHPGained()
 
 void MainWindow::on_actionDice_Roller_triggered()
 {
-    manualDiceRollerDialog = new ManualDiceRoller(this);
+    ManualDiceRoller *manualDiceRollerDialog = new ManualDiceRoller(this);
     manualDiceRollerDialog->show();
 }
 

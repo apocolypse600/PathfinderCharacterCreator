@@ -20,8 +20,6 @@ public:
     ~MainWindow();
     
 private slots:
-    void on_actionExit_triggered();
-
     void updateStr();
     void updateDex();
     void updateCon();
@@ -52,16 +50,12 @@ private slots:
 private:
     Ui::MainWindow *ui;
 
-
     void resetValues();
 
     int calculateAttributeCost(int abilityScore) const;
     void updatePointsSpent();
 
-    ManualDiceRoller *manualDiceRollerDialog;
-
     const int NUMBEROFSKILLS = 35;
-
     QString filename = "";
     const QString VERSION = "0.0.2";
 };
