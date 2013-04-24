@@ -215,6 +215,16 @@ void MainWindow::resetValues()
     ui->spinBoxHPGained5->setValue(0);
     ui->checkBoxFavoured1->setChecked(true);
 
+    for(int row = 0; row < NUMBEROFSKILLS; row++)
+    {
+        static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->setChecked(false);
+        //column 1 is the name of the class skill
+        ui->tableSkills->item(row,2)->setText("0");
+        static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->setValue(0);
+        ui->tableSkills->item(row,4)->setText("0");
+        static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->setValue(0);
+    }
+
     updateClassTable();
 
 }
@@ -472,6 +482,25 @@ void MainWindow::on_actionOpen_triggered()
                 //default :
             }
 
+            in.readLine();
+
+            for(int row = 0; row < NUMBEROFSKILLS; row++)
+            {
+                if ( in.readLine() == "true")
+                {
+                    static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->setChecked(true);
+                }
+                else
+                {
+                    static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->setChecked(false);
+                }
+                //column 1 is the name of the class skill
+                ui->tableSkills->item(row,2)->setText(in.readLine());
+                static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->setValue(in.readLine().toInt());
+                ui->tableSkills->item(row,4)->setText(in.readLine());
+                static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->setValue(in.readLine().toInt());
+            }
+
             sFile.close();
         }
 
@@ -594,6 +623,25 @@ void MainWindow::on_actionSave_triggered()
                 else
                 {
                     out << 5 << '\n';
+                }
+
+                out << '\n';
+
+                for(int row = 0; row < NUMBEROFSKILLS; row++)
+                {
+                    if ( static_cast<QCheckBox *>(ui->tableSkills->cellWidget(row,0))->isChecked())
+                    {
+                        out << "true\n";
+                    }
+                    else
+                    {
+                        out << "false\n";
+                    }
+                    //column 1 is the name of the class skill
+                    out << ui->tableSkills->item(row,2)->text() << '\n'
+                        << static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,3))->value() << '\n'
+                        << ui->tableSkills->item(row,4)->text() << '\n'
+                        << static_cast<QSpinBox *>(ui->tableSkills->cellWidget(row,5))->value() << '\n';
                 }
 
 
