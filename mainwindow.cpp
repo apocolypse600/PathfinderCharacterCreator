@@ -15,6 +15,81 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionOpen->setShortcuts(QKeySequence::Open);
     ui->actionNew->setShortcuts(QKeySequence::New);
 
+    // Stats tab
+    connect(ui->spinBoxStrBase, SIGNAL(valueChanged(int)),this,SLOT(updateStr()));
+    connect(ui->spinBoxStrEnh, SIGNAL(valueChanged(int)),this,SLOT(updateStr()));
+    connect(ui->spinBoxStrInh, SIGNAL(valueChanged(int)),this,SLOT(updateStr()));
+    connect(ui->spinBoxStrMisc, SIGNAL(valueChanged(int)),this,SLOT(updateStr()));
+
+    connect(ui->spinBoxDexBase, SIGNAL(valueChanged(int)),this,SLOT(updateDex()));
+    connect(ui->spinBoxDexEnh, SIGNAL(valueChanged(int)),this,SLOT(updateDex()));
+    connect(ui->spinBoxDexInh, SIGNAL(valueChanged(int)),this,SLOT(updateDex()));
+    connect(ui->spinBoxDexMisc, SIGNAL(valueChanged(int)),this,SLOT(updateDex()));
+
+    connect(ui->spinBoxConBase, SIGNAL(valueChanged(int)),this,SLOT(updateCon()));
+    connect(ui->spinBoxConEnh, SIGNAL(valueChanged(int)),this,SLOT(updateCon()));
+    connect(ui->spinBoxConInh, SIGNAL(valueChanged(int)),this,SLOT(updateCon()));
+    connect(ui->spinBoxConMisc, SIGNAL(valueChanged(int)),this,SLOT(updateCon()));
+
+    connect(ui->spinBoxIntBase, SIGNAL(valueChanged(int)),this,SLOT(updateInt()));
+    connect(ui->spinBoxIntEnh, SIGNAL(valueChanged(int)),this,SLOT(updateInt()));
+    connect(ui->spinBoxIntInh, SIGNAL(valueChanged(int)),this,SLOT(updateInt()));
+    connect(ui->spinBoxIntMisc, SIGNAL(valueChanged(int)),this,SLOT(updateInt()));
+
+    connect(ui->spinBoxWisBase, SIGNAL(valueChanged(int)),this,SLOT(updateWis()));
+    connect(ui->spinBoxWisEnh, SIGNAL(valueChanged(int)),this,SLOT(updateWis()));
+    connect(ui->spinBoxWisInh, SIGNAL(valueChanged(int)),this,SLOT(updateWis()));
+    connect(ui->spinBoxWisMisc, SIGNAL(valueChanged(int)),this,SLOT(updateWis()));
+
+    connect(ui->spinBoxChaBase, SIGNAL(valueChanged(int)),this,SLOT(updateCha()));
+    connect(ui->spinBoxChaEnh, SIGNAL(valueChanged(int)),this,SLOT(updateCha()));
+    connect(ui->spinBoxChaInh, SIGNAL(valueChanged(int)),this,SLOT(updateCha()));
+    connect(ui->spinBoxChaMisc, SIGNAL(valueChanged(int)),this,SLOT(updateCha()));
+
+    //Classes Tab
+    connect(ui->spinBoxClassSkills1, SIGNAL(valueChanged(int)),this,SLOT(updateClassSkills()));
+    connect(ui->spinBoxClassSkills2, SIGNAL(valueChanged(int)),this,SLOT(updateClassSkills()));
+    connect(ui->spinBoxClassSkills3, SIGNAL(valueChanged(int)),this,SLOT(updateClassSkills()));
+    connect(ui->spinBoxClassSkills4, SIGNAL(valueChanged(int)),this,SLOT(updateClassSkills()));
+    connect(ui->spinBoxClassSkills5, SIGNAL(valueChanged(int)),this,SLOT(updateClassSkills()));
+
+    connect(ui->spinBoxClassBAB1, SIGNAL(valueChanged(int)),this,SLOT(updateClassBAB()));
+    connect(ui->spinBoxClassBAB2, SIGNAL(valueChanged(int)),this,SLOT(updateClassBAB()));
+    connect(ui->spinBoxClassBAB3, SIGNAL(valueChanged(int)),this,SLOT(updateClassBAB()));
+    connect(ui->spinBoxClassBAB4, SIGNAL(valueChanged(int)),this,SLOT(updateClassBAB()));
+    connect(ui->spinBoxClassBAB5, SIGNAL(valueChanged(int)),this,SLOT(updateClassBAB()));
+
+    connect(ui->spinBoxClassFortSave1, SIGNAL(valueChanged(int)),this,SLOT(updateClassFortSave()));
+    connect(ui->spinBoxClassFortSave2, SIGNAL(valueChanged(int)),this,SLOT(updateClassFortSave()));
+    connect(ui->spinBoxClassFortSave3, SIGNAL(valueChanged(int)),this,SLOT(updateClassFortSave()));
+    connect(ui->spinBoxClassFortSave4, SIGNAL(valueChanged(int)),this,SLOT(updateClassFortSave()));
+    connect(ui->spinBoxClassFortSave5, SIGNAL(valueChanged(int)),this,SLOT(updateClassFortSave()));
+
+    connect(ui->spinBoxClassRefSave1, SIGNAL(valueChanged(int)),this,SLOT(updateClassRefSave()));
+    connect(ui->spinBoxClassRefSave2, SIGNAL(valueChanged(int)),this,SLOT(updateClassRefSave()));
+    connect(ui->spinBoxClassRefSave3, SIGNAL(valueChanged(int)),this,SLOT(updateClassRefSave()));
+    connect(ui->spinBoxClassRefSave4, SIGNAL(valueChanged(int)),this,SLOT(updateClassRefSave()));
+    connect(ui->spinBoxClassRefSave5, SIGNAL(valueChanged(int)),this,SLOT(updateClassRefSave()));
+
+    connect(ui->spinBoxClassWillSave1, SIGNAL(valueChanged(int)),this,SLOT(updateClassWillSave()));
+    connect(ui->spinBoxClassWillSave2, SIGNAL(valueChanged(int)),this,SLOT(updateClassWillSave()));
+    connect(ui->spinBoxClassWillSave3, SIGNAL(valueChanged(int)),this,SLOT(updateClassWillSave()));
+    connect(ui->spinBoxClassWillSave4, SIGNAL(valueChanged(int)),this,SLOT(updateClassWillSave()));
+    connect(ui->spinBoxClassWillSave5, SIGNAL(valueChanged(int)),this,SLOT(updateClassWillSave()));
+
+    connect(ui->spinBoxClassLevels1, SIGNAL(valueChanged(int)),this,SLOT(updateClassLevels()));
+    connect(ui->spinBoxClassLevels2, SIGNAL(valueChanged(int)),this,SLOT(updateClassLevels()));
+    connect(ui->spinBoxClassLevels3, SIGNAL(valueChanged(int)),this,SLOT(updateClassLevels()));
+    connect(ui->spinBoxClassLevels4, SIGNAL(valueChanged(int)),this,SLOT(updateClassLevels()));
+    connect(ui->spinBoxClassLevels5, SIGNAL(valueChanged(int)),this,SLOT(updateClassLevels()));
+
+    connect(ui->spinBoxHPGained1, SIGNAL(valueChanged(int)),this,SLOT(updateHPGained()));
+    connect(ui->spinBoxHPGained2, SIGNAL(valueChanged(int)),this,SLOT(updateHPGained()));
+    connect(ui->spinBoxHPGained3, SIGNAL(valueChanged(int)),this,SLOT(updateHPGained()));
+    connect(ui->spinBoxHPGained4, SIGNAL(valueChanged(int)),this,SLOT(updateHPGained()));
+    connect(ui->spinBoxHPGained5, SIGNAL(valueChanged(int)),this,SLOT(updateHPGained()));
+
+    //Skills tab
     ui->tableSkills->horizontalHeader()->setResizeMode(QHeaderView::Stretch);
 
     for(int i = 0; i < NUMBEROFSKILLS; i++)
@@ -168,6 +243,8 @@ void MainWindow::updateStr()
 
     ui->tableSkills->item(3,4)->setText(newStrMod);
     ui->tableSkills->item(33,4)->setText(newStrMod);
+
+    updatePointsSpent();
 }
 
 void MainWindow::updateDex()
@@ -187,6 +264,8 @@ void MainWindow::updateDex()
     ui->tableSkills->item(27,4)->setText(newDexMod);
     ui->tableSkills->item(29,4)->setText(newDexMod);
     ui->tableSkills->item(31,4)->setText(newDexMod);
+
+    updatePointsSpent();
 }
 
 void MainWindow::updateCon()
@@ -218,6 +297,7 @@ void MainWindow::updateInt()
         ui->tableSkills->item(i,4)->setText(newIntMod);
     }
 
+    updatePointsSpent();
 }
 
 void MainWindow::updateWis()
@@ -235,6 +315,8 @@ void MainWindow::updateWis()
     ui->tableSkills->item(26,4)->setText(newWisMod);
     ui->tableSkills->item(28,4)->setText(newWisMod);
     ui->tableSkills->item(32,4)->setText(newWisMod);
+
+    updatePointsSpent();
 }
 
 void MainWindow::updateCha()
@@ -254,144 +336,8 @@ void MainWindow::updateCha()
     ui->tableSkills->item(12,4)->setText(newChaMod);
     ui->tableSkills->item(25,4)->setText(newChaMod);
     ui->tableSkills->item(34,4)->setText(newChaMod);
-}
 
-//The slots that call the above functions
-
-void MainWindow::on_spinBoxStrBase_valueChanged()
-{
-    updateStr();
     updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxStrInh_valueChanged()
-{
-    updateStr();
-}
-
-void MainWindow::on_spinBoxStrEnh_valueChanged()
-{
-    updateStr();
-}
-
-void MainWindow::on_spinBoxStrMisc_valueChanged()
-{
-    updateStr();
-}
-
-
-
-void MainWindow::on_spinBoxDexBase_valueChanged()
-{
-    updateDex();
-    updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxDexInh_valueChanged()
-{
-    updateDex();
-}
-
-void MainWindow::on_spinBoxDexEnh_valueChanged()
-{
-    updateDex();
-}
-
-void MainWindow::on_spinBoxDexMisc_valueChanged()
-{
-    updateDex();
-}
-
-
-
-void MainWindow::on_spinBoxConBase_valueChanged()
-{
-    updateCon();
-    updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxConInh_valueChanged()
-{
-    updateCon();
-}
-
-void MainWindow::on_spinBoxConEnh_valueChanged()
-{
-    updateCon();
-}
-
-void MainWindow::on_spinBoxConMisc_valueChanged()
-{
-    updateCon();
-}
-
-
-
-void MainWindow::on_spinBoxIntBase_valueChanged()
-{
-    updateInt();
-    updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxIntInh_valueChanged()
-{
-    updateInt();
-}
-
-void MainWindow::on_spinBoxIntEnh_valueChanged()
-{
-    updateInt();
-}
-
-void MainWindow::on_spinBoxIntMisc_valueChanged()
-{
-    updateInt();
-}
-
-
-
-void MainWindow::on_spinBoxWisBase_valueChanged()
-{
-    updateWis();
-    updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxWisInh_valueChanged()
-{
-    updateWis();
-}
-
-void MainWindow::on_spinBoxWisEnh_valueChanged()
-{
-    updateWis();
-}
-
-void MainWindow::on_spinBoxWisMisc_valueChanged()
-{
-    updateWis();
-}
-
-
-
-void MainWindow::on_spinBoxChaBase_valueChanged()
-{
-    updateCha();
-    updatePointsSpent();
-}
-
-void MainWindow::on_spinBoxChaInh_valueChanged()
-{
-    updateCha();
-}
-
-void MainWindow::on_spinBoxChaEnh_valueChanged()
-{
-    updateCha();
-}
-
-void MainWindow::on_spinBoxChaMisc_valueChanged()
-{
-    updateCha();
 }
 
 int MainWindow::calculateAttributeCost(int abilityScore) const
@@ -749,180 +695,6 @@ void MainWindow::updateHPGained()
             + ui->spinBoxHPGained5->text().toInt();
 
     ui->lineEditHPGainedTotal->setText(QString::number(newValue));
-}
-
-void MainWindow::on_spinBoxClassSkills1_valueChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_spinBoxClassSkills2_valueChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_spinBoxClassSkills3_valueChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_spinBoxClassSkills4_valueChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_spinBoxClassSkills5_valueChanged()
-{
-    updateClassSkills();
-}
-
-void MainWindow::on_spinBoxClassBAB1_valueChanged()
-{
-    updateClassBAB();
-}
-
-void MainWindow::on_spinBoxClassBAB2_valueChanged()
-{
-    updateClassBAB();
-}
-
-void MainWindow::on_spinBoxClassBAB3_valueChanged()
-{
-    updateClassBAB();
-}
-
-void MainWindow::on_spinBoxClassBAB4_valueChanged()
-{
-    updateClassBAB();
-}
-
-void MainWindow::on_spinBoxClassBAB5_valueChanged()
-{
-    updateClassBAB();
-}
-
-void MainWindow::on_spinBoxClassFortSave1_valueChanged()
-{
-    updateClassFortSave();
-}
-
-void MainWindow::on_spinBoxClassFortSave2_valueChanged()
-{
-    updateClassFortSave();
-}
-
-void MainWindow::on_spinBoxClassFortSave3_valueChanged()
-{
-    updateClassFortSave();
-}
-
-void MainWindow::on_spinBoxClassFortSave4_valueChanged()
-{
-    updateClassFortSave();
-}
-
-void MainWindow::on_spinBoxClassFortSave5_valueChanged()
-{
-    updateClassFortSave();
-}
-
-void MainWindow::on_spinBoxClassRefSave1_valueChanged()
-{
-    updateClassRefSave();
-}
-
-void MainWindow::on_spinBoxClassRefSave2_valueChanged()
-{
-    updateClassRefSave();
-}
-void MainWindow::on_spinBoxClassRefSave3_valueChanged()
-{
-    updateClassRefSave();
-}
-
-void MainWindow::on_spinBoxClassRefSave4_valueChanged()
-{
-    updateClassRefSave();
-}
-
-void MainWindow::on_spinBoxClassRefSave5_valueChanged()
-{
-    updateClassRefSave();
-}
-
-void MainWindow::on_spinBoxClassWillSave1_valueChanged()
-{
-    updateClassWillSave();
-}
-
-void MainWindow::on_spinBoxClassWillSave2_valueChanged()
-{
-    updateClassWillSave();
-}
-
-void MainWindow::on_spinBoxClassWillSave3_valueChanged()
-{
-    updateClassWillSave();
-}
-
-void MainWindow::on_spinBoxClassWillSave4_valueChanged()
-{
-    updateClassWillSave();
-}
-
-void MainWindow::on_spinBoxClassWillSave5_valueChanged()
-{
-    updateClassWillSave();
-}
-
-void MainWindow::on_spinBoxClassLevels1_valueChanged()
-{
-    updateClassLevels();
-}
-
-void MainWindow::on_spinBoxClassLevels2_valueChanged()
-{
-    updateClassLevels();
-}
-
-void MainWindow::on_spinBoxClassLevels3_valueChanged()
-{
-    updateClassLevels();
-}
-
-void MainWindow::on_spinBoxClassLevels4_valueChanged()
-{
-    updateClassLevels();
-}
-
-void MainWindow::on_spinBoxClassLevels5_valueChanged()
-{
-    updateClassLevels();
-}
-
-void MainWindow::on_spinBoxHPGained1_valueChanged()
-{
-    updateHPGained();
-}
-
-void MainWindow::on_spinBoxHPGained2_valueChanged()
-{
-    updateHPGained();
-}
-
-void MainWindow::on_spinBoxHPGained3_valueChanged()
-{
-    updateHPGained();
-}
-
-void MainWindow::on_spinBoxHPGained4_valueChanged()
-{
-    updateHPGained();
-}
-
-void MainWindow::on_spinBoxHPGained5_valueChanged()
-{
-    updateHPGained();
 }
 
 void MainWindow::on_actionDice_Roller_triggered()
